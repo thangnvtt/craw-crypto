@@ -1,0 +1,33 @@
+{
+  "name": "craw-crypto",
+  "version": "1.0.0",
+  "description": "Express API for fetching cryptocurrency prices from Binance",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:api": "./test-api.sh",
+    "examples": "node examples/api-usage.js"
+  },
+  "keywords": [
+    "crypto",
+    "api",
+    "express",
+    "binance"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "dotenv": "^16.3.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
