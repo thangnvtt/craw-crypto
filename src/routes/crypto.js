@@ -1,13 +1,14 @@
 const express = require("express");
 const axios = require("axios");
 const router = express.Router();
+const config = require("../config");
 const {
   sendSuccess,
   sendValidationError,
   sendInternalError,
 } = require("../utils/response");
 
-const BINANCE_BASE_URL = "https://api.binance.com/api/v3";
+const { baseUrl: BINANCE_BASE_URL, timeout: BINANCE_TIMEOUT } = config.binance;
 
 /**
  * @swagger
@@ -82,7 +83,7 @@ router.get("/price/:symbol", async (req, res) => {
       params: {
         symbol: symbol.toUpperCase(),
       },
-      timeout: 10000,
+      timeout: BINANCE_TIMEOUT,
     });
 
     const data = response.data;
@@ -157,7 +158,7 @@ router.get("/ethusdt", async (req, res) => {
       params: {
         symbol: "ETHUSDT",
       },
-      timeout: 10000,
+      timeout: BINANCE_TIMEOUT,
     });
 
     const data = response.data;
@@ -263,7 +264,7 @@ router.post("/prices", async (req, res) => {
           params: {
             symbol: symbol.toUpperCase(),
           },
-          timeout: 10000,
+          timeout: BINANCE_TIMEOUT,
         });
 
         const data = response.data;
