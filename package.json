@@ -6,9 +6,12 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
+    "build": "echo 'No build step required for Node.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:api": "./test-api.sh",
-    "examples": "node examples/api-usage.js"
+    "examples": "node examples/api-usage.js",
+    "deploy:render": "echo 'Push to main branch to deploy to Render'",
+    "deploy:vercel": "vercel --prod"
   },
   "keywords": [
     "crypto",

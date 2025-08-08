@@ -33,12 +33,30 @@ npm run dev
 npm start
 ```
 
+## 🚀 Deployment
+
+This API can be deployed to several free hosting platforms:
+
+### Quick Deploy to Render (Recommended)
+
+1. Push your code to GitHub
+2. Go to [render.com](https://render.com) and sign up
+3. Click "New +" → "Web Service"
+4. Connect your repository
+5. Use these settings:
+   - **Build Command**: `npm install`
+   - **Start Command**: `npm start`
+   - **Environment**: `Node`
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
+
 ## API Documentation
 
 Interactive API documentation is available at:
 
 ```
-http://localhost:3000/api-docs
+Local: http://localhost:3000/api-docs
+Production: https://your-app-name.onrender.com/api-docs
 ```
 
 ## API Endpoints
